@@ -12,7 +12,8 @@
     "dist": "tools/dist.sh",
     "codecov": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "prepublish": "tools/dist.sh"
+    "prepublish": "tools/dist.sh",
+    "prepare": "tools/dist.sh"
   },
   "repository": {
     "type": "git",
