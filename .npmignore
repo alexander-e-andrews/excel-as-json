@@ -1,6 +1,7 @@
 .idea
 .gitignore
 build
+src
 coverage
 data
 spec
