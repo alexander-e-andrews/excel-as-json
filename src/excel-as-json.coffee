@@ -184,7 +184,30 @@ _validateOptions = (options) ->
       options.convertTextToNumber = true
   options
 
+processWorkSheet = function (src, dst, options = _DEFAULT_OPTIONS, callback = void 0) {
+    options = _validateOptions(options);
+    if (!callback) {
+      callback = function (err, data) { };
+    }
+    // NOTE: 'excel' does not properly bubble file not found and prints
+    //       an ugly error we can't trap, so look for this common error first
 
+    var result;
+    result = convert(src, options);
+
+    if (dst) {
+      return write(result, dst, function (err) {
+        if (err) {
+          return callback(err);
+        } else {
+          return callback(void 0, result);
+        }
+      });
+    } else {
+      return callback(void 0, result);
+    }
+  };
+  
 processFile = (src, dst, options=_DEFAULT_OPTIONS, callback=undefined) ->
   options = _validateOptions(options)
 
