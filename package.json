@@ -4,7 +4,7 @@
   "description": "Convert Excel data to JSON",
   "author": "Steve Tarver <steve.tarver@gmail.com>",
   "license": "MIT",
-  "main": "lib/excel-as-json.js",
+  "main": "excel-as-json.js",
   "scripts": {
     "clean": "tools/clean.sh",
     "build": "tools/build.sh",
