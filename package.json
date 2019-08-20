@@ -11,7 +11,7 @@
     "test": "coffee -c -o lib/ src/ && coffee -c -o test/ spec/ && sed -i '' -e 's/\\.\\.\/src\/excel-as-json/\\.\\.\/lib\/excel-as-json/' test/*",
     "dist": "tools/dist.sh",
     "codecov": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
